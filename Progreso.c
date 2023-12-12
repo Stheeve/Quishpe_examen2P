@@ -25,4 +25,16 @@ void imprimirDetalle(int datos[NUM_INSUMOS][NUM_MESES * 2]) {
     }
 }
 
+void imprimirTotalesAnuales(int datos[NUM_INSUMOS][NUM_MESES * 2]) {
+    for (int i = 0; i < NUM_INSUMOS; i++) {
+        int totalIngresos = 0, totalEgresos = 0;
+        for (int j = 0; j < NUM_MESES * 2; j += 2) {
+            totalIngresos += datos[i][j];
+            totalEgresos += datos[i][j + 1];
+        }
+        printf("\nTotales anuales de Insumo %d: Ingresos totales: %d, Egresos totales: %d\n", i + 1, totalIngresos, totalEgresos);
+    }
+}
+
+
 
