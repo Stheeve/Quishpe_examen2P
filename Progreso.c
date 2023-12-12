@@ -36,5 +36,35 @@ void imprimirTotalesAnuales(int datos[NUM_INSUMOS][NUM_MESES * 2]) {
     }
 }
 
+int main() {
+    int datos[NUM_INSUMOS][NUM_MESES * 2];
+        int opcion;
 
+
+    generarDatosAleatorios(datos);
+
+    // Menú de opciones
+    do{
+        printf("\nMenu:\n");
+        printf("1. Imprimir detalle de ingresos y egresos\n");
+        printf("2. Imprimir totales anuales\n");
+        printf("3. Salir\n");
+        scanf("%d", &opcion);
+
+        switch (opcion) {
+            case 1:
+                imprimirDetalle(datos);
+                break;
+            case 2:
+                imprimirTotalesAnuales(datos);
+                break;
+            case 3:
+                printf("Eligio la opcion de salir\n");
+                return 0;
+            default:
+                printf("Opción no válida\n");
+        }
+    } while (opcion !=3);
+    }
+        
 
