@@ -16,3 +16,13 @@ void generarDatosAleatorios(int datos[NUM_INSUMOS][NUM_MESES * 2]) {
     }
 }
 
+void imprimirDetalle(int datos[NUM_INSUMOS][NUM_MESES * 2]) {
+    for (int i = 0; i < NUM_INSUMOS; i++) {
+        printf("\nDetalle de Insumo %d:\n", i + 1);
+        for (int j = 0; j < NUM_MESES * 2; j += 2) {
+            printf("Mes %d: Ingresos: %d, Egresos: %d\n", j / 2 + 1, datos[i][j], datos[i][j + 1]);
+        }
+    }
+}
+
+
